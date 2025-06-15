@@ -10,11 +10,11 @@
       [@b.select style="width:100px" name="graduate.std.stdType.id" label="学生类别" items=stdTypes option="id,name" empty="..." /]
       [@b.date label="毕业日期" name="graduate.graduateOn" format="yyyy-MM-dd"/]
       [@b.select style="width:100px" name="graduate.std.state.department.id" label="院系" items=departments option="id,name" empty="..." /]
-      <input type="hidden" name="orderBy" value="graduate.season.graduateYear desc"/>
+      <input type="hidden" name="orderBy" value="graduate.season.graduateOn desc"/>
     [/@]
     </div>
     <div class="search-list">
-      [@b.div id="downloadlist" href="!search?orderBy=graduate.season.graduateYear desc"/]
+      [@b.div id="downloadlist" href="!search?orderBy=graduate.season.graduateOn desc"/]
     </div>
   </div>
 [@b.foot/]

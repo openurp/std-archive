@@ -17,11 +17,12 @@
 
 package org.openurp.std.archive.web.action
 
-import org.beangle.cdi.bind.BindModule
+import org.beangle.commons.cdi.BindModule
 
 class DefaultModule extends BindModule {
 
   protected override def binding(): Unit = {
     bind(classOf[DownloadAction])
+    bind(classOf[DocSettingAction])
   }
 }

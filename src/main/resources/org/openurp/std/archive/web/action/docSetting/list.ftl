@@ -1,0 +1,25 @@
+[#ftl]
+[@b.head/]
+[@b.grid items=docSettings var="docSetting"]
+  [@b.gridbar]
+    bar.addItem("${b.text("action.new")}",action.add());
+    bar.addItem("${b.text("action.modify")}",action.edit());
+    bar.addItem("${b.text("action.delete")}",action.remove("确认删除?"));
+  [/@]
+  [@b.row]
+    [@b.boxcol /]
+    [@b.col width="10%" property="docType.code" title="代码"/]
+    [@b.col width="10%" property="docType.name" title="名称"/]
+    [@b.col property="url" title="地址"]
+      <span style="font-size:0.8em">${docSetting.url}</span>
+    [/@]
+    [@b.col width="7%" property="orientation" title="纸张方向"]
+      [#if docSetting.orientation?string=='Portrait']纵向[#else]横向[/#if]
+    [/@]
+    [@b.col width="5%" property="pageSize" title="纸张"/]
+    [@b.col width="5%" property="printable" title="可打印"]${(docSetting.printable?string("是","否"))!}[/@]
+    [@b.col width="5%" property="downloadable" title="可下载"]${(docSetting.downloadable?string("是","否"))!}[/@]
+    [@b.col width="5%" property="enabled" title="启用"]${(docSetting.enabled?string("是","否"))!}[/@]
+  [/@]
+  [/@]
+[@b.foot/]
