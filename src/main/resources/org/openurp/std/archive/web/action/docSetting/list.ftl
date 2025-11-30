@@ -17,8 +17,6 @@
       [#if docSetting.orientation?string=='Portrait']纵向[#else]横向[/#if]
     [/@]
     [@b.col width="5%" property="pageSize" title="纸张"/]
-    [@b.col width="5%" property="printable" title="可打印"]${(docSetting.printable?string("是","否"))!}[/@]
-    [@b.col width="5%" property="downloadable" title="可下载"]${(docSetting.downloadable?string("是","否"))!}[/@]
     [@b.col width="5%" property="enabled" title="启用"]${(docSetting.enabled?string("是","否"))!}[/@]
   [/@]
   [/@]

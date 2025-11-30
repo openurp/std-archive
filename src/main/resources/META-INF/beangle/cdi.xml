@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<cdi>
-  <container>
-    <module class="org.openurp.starter.web.ProjectModule"/>
-    <module class="org.openurp.std.archive.web.action.DefaultModule"/>
-  </container>
-</cdi>
